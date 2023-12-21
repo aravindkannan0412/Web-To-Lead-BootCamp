@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Lead Form</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DH30000008eev" method="POST" onsubmit="beforesubmit(event)">
+    
+    <input type=hidden name='captcha_settings' value='{"keyname":"WebtoLead","fallback":"true","orgId":"00DH30000008eev","ts":""}'>
+    <input type=hidden name="oid" value="00DH30000008eev">
+    <input type=hidden name="retURL" value="https://aravindkannan0412.github.io/Web-To-Lead/thanks.html">
+
+    <input type=hidden name="LeadDate__c" class="outputdate">
+
+    <h1>Create Lead</h1>
+    <label for="first_name">First Name:</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true"/><br>
+    
+    <label for="last_name">Last Name:</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true"/><br>
+    
+    <label for="email">Email:</label><input  id="email" maxlength="80" name="email" size="20" type="text" required="true" /><br>
+    
+    <label for="Lead_Date">Lead Date:</label>
+    <input  id="Lead_Date" name="Lead_Date" size="12" type="date" required="true" class="inputdate" /><br>
+
+    <input type="submit" name="submit" class="submit">
+    
+    <div class="g-recaptcha" 
+    data-callback="capthchasuccess"
+    data-sitekey="6LfBIDgpAAAAAD6yb2FDT3bt1H746hmFV3M-rXsh"></div><br>
+
+    </form>
+    
+</body>
+</html>
+    
