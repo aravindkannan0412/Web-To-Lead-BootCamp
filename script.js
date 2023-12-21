@@ -5,17 +5,13 @@ function beforesubmit(event){
         let output =document.querySelector('.outputdate');
         let input =document.querySelector('.inputdate');
         console.log(input.value);//string-->date(in locale en_IN)
-    //put the value in output in output
-    //pushing this again
         let formattedDate=new Date(input.value).toLocaleDateString("en-IN");
         output.value=formattedDate;
     }
     else{
         alert("Please check the reCAPTCHA box to submit the lead");
         event.preventDefault();
-
     }
-//this is prevent submit behaviour
 }
 
 function timestamp()
